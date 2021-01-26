@@ -14,7 +14,7 @@
 
 #####  然后引入 cesium-graphicBuffer.js 即可
 
-<a href="http://zhangticcc.gitee.io/webgis/"><img alt="" height="100%" src="https://img-blog.csdnimg.cn/20201202172350462.gif" width="90%" ></a>&nbsp;
+<a href="http://zhangticcc.gitee.io/webgis/"><img alt="" height="100%" src="https://img-blog.csdnimg.cn/20210126180304472.gif" width="90%" ></a>&nbsp;
 
 ``` 
     // 初始化
