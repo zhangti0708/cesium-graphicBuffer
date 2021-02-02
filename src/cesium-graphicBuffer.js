@@ -30,7 +30,7 @@ Cesium && (() => {
      * 创建点
      * @param params
      */
-    Cesium.drawPointGraphics = function (params) {
+    Cesium.drawPointGraphics = function (params = {}) {
 
         return new Promise((resolve, reject) => {
 
@@ -86,7 +86,7 @@ Cesium && (() => {
      * 画线
      * @param {*} params 
      */
-    Cesium.drawLineGraphics = function (params) {
+    Cesium.drawLineGraphics = function (params = {}) {
 
         return new Promise((resolve, reject) => {
 
@@ -153,7 +153,7 @@ Cesium && (() => {
      * 画面 
      * @param {*} params 
      */
-    Cesium.drawPolygonGraphics = function (params) {
+    Cesium.drawPolygonGraphics = function (params = {}) {
 
         return new Promise((resolve, reject) => {
 
@@ -240,7 +240,7 @@ Cesium && (() => {
      * 创建缓冲区图形
      * @param {*} params 
      */
-    Cesium.createGraphicsBuffer = function (params) {
+    Cesium.createGraphicsBuffer = function (params = {}) {
         const _viewer = params.viewer
         let _turfPositions = params.turfPositions || []
         let _material = params.material || []
@@ -249,6 +249,7 @@ Cesium && (() => {
         let _hierarchy = new Cesium.PolygonHierarchy()
         let _radius = params.radius || 0.1
         let radius = 0
+        
         const parse = (arr) => {
             var buffered = [];
             for (var i = 0; i < arr.length; i++) {
@@ -256,6 +257,7 @@ Cesium && (() => {
             }
             return buffered
         }
+        
         _bufferEntity.animation = _animation;
         _bufferEntity.polygon = {
             material: Cesium.Color.SKYBLUE.withAlpha(0.5),
